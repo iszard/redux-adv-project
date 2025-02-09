@@ -10,5 +10,5 @@ node v20.15.0
 .env file REQUIRED. Templated as follows:
 
 ```
-FIREBASE_URL=<your firebase server and json table>
+REACT_APP_FIREBASE_URL=<your firebase server and json table>
 ```

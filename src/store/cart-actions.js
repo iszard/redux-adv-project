@@ -4,7 +4,7 @@ import { uiActions } from "./ui-slice";
 export const fetchCartData = () => {
   return async (dispatch) => {
     const fetchData = async () => {
-      const response = await fetch(process.env.FIREBASE_URL);
+      const response = await fetch(process.env.REACT_APP_FIREBASE_URL);
 
       if (!response.ok) {
         throw new Error("Could not fetch cart data!");
@@ -47,7 +47,7 @@ export const sendCartData = (cart) => {
     );
 
     const sendRequest = async () => {
-      const response = await fetch(process.env.FIREBASE_URL, {
+      const response = await fetch(process.env.REACT_APP_FIREBASE_URL, {
         method: "PUT",
         body: JSON.stringify({
           items: cart.items,
